@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Viewport</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" media="(max-width: 480px)" href="css/mobile.css">
     <style type="text/css">
         body, p, img, dl, dt, dd, ul, ol, h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; }
         body { position: relative; font: 12px/1.5 "Microsoft YaHei", Arial; }
@@ -17,11 +16,11 @@
         .cf:after { clear: both; content: "."; display: block; height: 0; overflow: hidden; visibility: hidden; zoom: 1; }
 
         .container {
-            width: 980px;
-            margin: 0 auto;
+            width: 100%;
         }
 
         .container .bird {
+            margin-bottom: 10px;
             padding: 10px 15px;
             background-color: #E0E0E0;
         }
@@ -41,6 +40,19 @@
             font-size: 14px;
             line-height: 2;
         }
+
+        /* portrait 横屏*/
+        /* landscape 横屏*/
+        @media(orientation: portrait) {
+            .container .bird img {
+                width: 100%;
+                float: none;
+                margin-right: 0;
+            }
+            .container .bird h1 {
+                margin-top: 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -50,6 +62,11 @@
             <img src="images/1.jpg">
             <h1>黑顶麻雀</h1>
             <p>黑顶麻雀，分布于蒙古、中亚以及中国大陆的内蒙古、宁夏、甘肃、新疆等地，多栖息于海拔850-1100米的荒漠红柳及胡杨树间以及也见于沼泽地。主食种子，在繁殖期间多以虫类为食如：象鼻虫、蚱蜢、毛毛虫等。</p>
+        </div>
+        <div class="bird cf">
+            <img src="images/2.jpg">
+            <h1>梅花鹿</h1>
+            <p>梅花鹿，是鹿科的动物。分布于东亚，范围从西伯利亚到韩国、中国东部和越南；在日本等西太平洋岛屿也有分布。栖息于原始森林、阔叶森林、沼泽、盐沼和离岸岛屿。听觉及嗅觉发达，擅长奔跑。野生梅花鹿寿命大约12岁。</p>
         </div>
     </div>
 
